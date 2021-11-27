@@ -10,24 +10,30 @@ public class CSVParser {
 	}
 
 	public static void main(String[] args) {
-		
+
 		Vector <String> v = new Vector<String>();
-		
+
 		try {
-			Scanner inputFile = new Scanner(new BufferedReader(new FileReader("C:\\Users\\fedri\\Documens\\GitHub\\EserciziCorso\\AziendeUniCSV\\src\\AziendeUniCSV\\files\\input.txt")));
+			Scanner inputFile = new Scanner(new BufferedReader(new FileReader("C:\\Users\\fedri\\Documents\\GitHub\\EserciziCorso\\AziendeUniCSV\\src\\AziendeUniCSV\\files\\input.txt")));
 
 			while(inputFile.hasNext()) {
 				v.add(inputFile.nextLine());
 			}
-			
+
 			inputFile.close();
 		}
 		catch(IOException e){
 			System.out.println("I/O Error");
 		}
-		
+
 		for(String s : v) {
 			System.out.println(s);
+			String[] par = s.split(",");
+			for(String str: par) {
+				System.out.println(str);
+			}
+			System.out.println("------------------");
+
 		}
 
 	}

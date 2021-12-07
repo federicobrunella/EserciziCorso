@@ -43,11 +43,11 @@ public class Main {
 			System.out.println( obj );
 			System.out.println( "OK" );
 			
-			JSONObject city = (JSONObject)obj.get("city");
+			JSONArray city = (JSONArray)obj.get("list");
 			
-			london.setCountry((String)city.get("country"));
+			//london.setCountry((String)city.get("country"));
 			
-			System.out.println( london.getCountry() );
+			System.out.println( city );
 
 
 		} catch (IOException | ParseException e) {

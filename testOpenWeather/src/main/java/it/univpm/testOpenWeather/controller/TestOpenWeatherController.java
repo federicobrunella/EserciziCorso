@@ -21,5 +21,10 @@ public class TestOpenWeatherController {
 	public ResponseEntity<Object> getForecast() {
 		return new ResponseEntity<>(weatherService.toJSON(weatherService.getForecast(weatherService.getJSONForecast("London"))), HttpStatus.OK);
 	}
+	
+	@RequestMapping(value = "/getWeather")
+	public ResponseEntity<Object> getForecastbyCity(@RequestParam(name="city", defaultValue="London") String city) {
+		return new ResponseEntity<>(weatherService.toJSON(weatherService.getForecast(weatherService.getJSONForecast(city))), HttpStatus.OK);
+	}
 
 }

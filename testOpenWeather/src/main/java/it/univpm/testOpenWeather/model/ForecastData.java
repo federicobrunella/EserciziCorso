@@ -6,7 +6,7 @@ public class ForecastData {
 	private String txtDateTime;
 
 	private double temp;
-	private double feelsLike;
+	private float feelsLike;
 	private double tempMin;
 	private double tempMax;
 	
@@ -34,7 +34,7 @@ public class ForecastData {
 		return feelsLike;
 	}
 	
-	public void setFeelsLike(double feelsLike) {
+	public void setFeelsLike(float feelsLike) {
 		this.feelsLike = feelsLike;
 	}
 	

@@ -79,9 +79,9 @@ public class WeatherServiceImpl implements WeatherService {
 			
 			singleForecast.setDt((long)listElement.get("dt"));
 			singleForecast.setTxtDateTime((String)listElement.get("dt_txt"));
-			//singleForecast.setTemp((double)main.get("temp"));
-			//singleForecast.setFeelsLike((double)main.get("feels_like"));
-			//singleForecast.setTempMin((double)main.get("temp_min"));
+			singleForecast.setTemp(((Number)main.get("temp")).doubleValue());    //???
+			singleForecast.setFeelsLike(((Number)main.get("feels_like")).floatValue()); //???
+			//singleForecast.setTempMin((double)main.get("temp_min"));  //???
 			//singleForecast.setTempMax((double)main.get("temp_max"));
 			
 			singleForecast.setMain((String)weather.get("main"));
